@@ -1,7 +1,9 @@
 <div class="wrapper">
   <mat-card class="example-card">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
+      <div mat-card-avatar class="example-header-image">
+        <mat-icon>account_box</mat-icon>
+      </div>
       <mat-card-title> {{title}} </mat-card-title>
       <mat-card-subtitle>Assignment</mat-card-subtitle>
     </mat-card-header>
@@ -17,20 +19,26 @@
         </mat-form-field>
       </form> -->
       <form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
-        <label>
-          First Name:
-          <input matInput type="text" formControlName="firstName">
-        </label>
-        <label>
-          Last Name:
-          <input matInput type="text" formControlName="lastName">
-        </label>
-        <button mat-raised-button>Submit</button>
+        <mat-form-field>
+          <label>
+            First Name:
+            <input matInput type="text" formControlName="firstName">
+          </label>
+        </mat-form-field>
+        <mat-form-field>
+          <label>
+            Last Name:
+            <input matInput type="text" formControlName="lastName">
+          </label>
+        </mat-form-field>
+        <button mat-raised-button color="primary">Submit</button>
       </form>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>Submit</button>
+      <div class="content">
+        {{ studentForm.value | json }}
+      </div>
+      <!-- <button mat-raised-button color="primary">Submit</button> -->
     </mat-card-actions>
-    {{ studentForm.value | json }}
   </mat-card>
 </div>
