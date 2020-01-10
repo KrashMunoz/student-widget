@@ -31,8 +31,12 @@ app.get('/', (req, res) => {
 
 app.post('/register', (req, res) => {
   console.log(req.body);
-//   res.status(200).send({"message": "data received"});
-  let new_student = new Student(req.body);
+  //   res.status(200).send({"message": "data received"});
+  let new_student = new Student({
+    _id: new mongoose.Types.ObjectId,
+    first_name: req.body.firstName,
+    last_name: req.body.lastName
+  });
   new_student.save(function (err, Student) {
     if (err)
       res.send(err);
