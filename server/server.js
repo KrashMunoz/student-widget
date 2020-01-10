@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 app.post('/register', (req, res) => {
   console.log(req.body);
-  res.status(401).send({"message": "data received"});
+//   res.status(200).send({"message": "data received"});
   let new_student = new Student(req.body);
   new_student.save(function (err, Student) {
     if (err)
