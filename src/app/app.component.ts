@@ -23,7 +23,7 @@ export class AppComponent {
     // TODO: Use EventEmitter with form value
     console.log(this.studentForm.value);
 
-    this._registrationService.registerStudent(this.studentForm) 
+    this._registrationService.registerStudent(this.studentForm.value) 
       .subscribe(
         data => console.log('Success!', data),
         error => console.log('Error!', error)
