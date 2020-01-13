@@ -13,8 +13,6 @@ exports.list_all_students = function(req, res) {
 };
 
 
-
-
 exports.create_a_student = function(req, res) {
   var new_student = new Student(req.body);
   new_student.save(function(err, Student) {

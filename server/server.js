@@ -23,7 +23,10 @@ const app = express();
 
 app.use(bodyParser.json());
 
+// Middleware
 app.use(cors());
+
+// API
 
 app.get('/', (req, res) => {
   res.send('Hello from server!');
