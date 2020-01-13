@@ -27,6 +27,7 @@
           <mat-error *ngIf="studentForm.get('lastName').errors ?.maxlength">String can't exceed 35 Characters
           </mat-error>
         </mat-form-field>
+        <re-captcha formControlName="recaptchaReactive"></re-captcha>
       </mat-card-content>
       <button mat-raised-button color="primary" [disabled]="!studentForm.valid" style="float: right;">Submit</button>
       <div class="alert alert-danger" *ngIf="errorMsg">

@@ -23,6 +23,7 @@ export class AppComponent {
   studentForm = new FormGroup({
     firstName: new FormControl('', [Validators.required, Validators.maxLength(35)]),
     lastName: new FormControl('', [Validators.required, Validators.maxLength(35)]),
+    recaptchaReactive: new FormControl(null, Validators.required)
   });
   matcher = new MyErrorStateMatcher();
   // get firstName() {
