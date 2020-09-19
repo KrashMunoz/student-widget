@@ -29,5 +29,6 @@ import { RecaptchaModule, RecaptchaFormsModule, RECAPTCHA_SETTINGS, RecaptchaSet
     useValue: {
       siteKey: '6LdX-84UAAAAAMbN_9VyTuMPTvPYnYTaB8n0vUFs',
     } as RecaptchaSettings,
-  }]})
+  }]
+})
 export class AppModule { }
